@@ -15,7 +15,7 @@ nxos2 = {
 
     "host": "nxos2.lasthop.io",
     "username": "pyclass",
-    "password": "88newclass",
+    "password": password,
     "device_type": "cisco_nxos",
 }
 
