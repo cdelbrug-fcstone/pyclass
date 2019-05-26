@@ -1,10 +1,13 @@
 from netmiko import ConnectHandler
+from getpass import getpass
+
+password = getpass()
 
 nxos1 = {
 
     "host": "nxos1.lasthop.io",
     "username": "pyclass",
-    "password": "88newclass",
+    "password": password,
     "device_type": "cisco_nxos",
 }
 

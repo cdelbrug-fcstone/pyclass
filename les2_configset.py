@@ -1,11 +1,12 @@
 from netmiko import ConnectHandler
 from datetime import datetime
+from getpass import getpass
 
 cisco3 = {
 
     "host": "cisco3.lasthop.io",
     "username": "pyclass",
-    "password": "88newclass",
+    "password": password,
     "device_type": "cisco_ios",
 }
 
