@@ -105,3 +105,4 @@ venv.bak/
 
 # netmiko file
 /home/cdelbrugge/.netmiko.yml
+/home/cdelbrugge/pyclass/lesson_3/.netmiko.yml
