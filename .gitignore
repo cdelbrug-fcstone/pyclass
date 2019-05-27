@@ -104,4 +104,4 @@ venv.bak/
 .mypy_cache/
 
 # netmiko file
-/home/cdelbrugge/pyclass/.netmiko.yml
+/home/cdelbrugge/.netmiko.yml
