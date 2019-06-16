@@ -1,0 +1,12 @@
+Value MAC (\S+)
+Value ADDRESS (\S+)
+Value NAME (\S+)
+Value INTERFACE (\S+)
+
+Start
+  ^MAC Address -> Details
+
+Details
+  ^${MAC}\s${ADDRESS}\s+${NAME}\s+${INTERFACE}.*$$ -> Record
+
+EOF

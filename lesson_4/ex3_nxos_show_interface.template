@@ -1,0 +1,17 @@
+Value PORT_NAME (Eth\S+)
+Value LINE_STATUS (up|down)
+Value ADMIN_STATE (up|down|administratively\sdown)
+Value MAC ([0-9|a-f][0-9|a-f][0-9|a-f][0-9|a-f]\.[0-9|a-f][0-9|a-f][0-9|a-f][0-9|a-f]\.[0-9|a-f][0-9|a-f][0-9|a-f][0-9|a-f])
+Value MTU (\d+)
+Value DUPLEX (full-duplex|half-duplex)
+Value SPEED (.*)
+
+Start
+  ^${PORT_NAME}.*${LINE_STATUS}\s*$$
+  ^admin.*${ADMIN_STATE}.*$$ 
+  ^\s+Hardware:\s+\S+\s\S+\s${MAC}\s\S+
+  ^\s+MTU\s${MTU}.*$$
+  ^\s+${DUPLEX},\s${SPEED}.*$$ -> Record
+
+
+EOF
