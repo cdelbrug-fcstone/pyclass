@@ -18,15 +18,8 @@ device = Device(
     verify=False,
     )
 
-output = device.show("show interface Ethernet1/1")
+config = device.config_list(["interface loopback180", "ip address 10.50.10.10/32", "interface loopback170", "ip address 10.50.20.20/32"])
 
+for output_list in config:
+    print(etree.tostring(output_list).decode())
 
-#print(etree.tostring(output).decode()) 
-#print(output.find(".//{*}state").text)
-
-intf_name = output.find(".//{*}interface").text
-intf_state = output.find(".//{*}state").text
-intf_mtu = output.find(".//{*}eth_mtu").text
-
-
-print(f"Interface: {intf_name}; State: {intf_state}; MTU: {intf_mtu}")
